@@ -43,7 +43,6 @@ body > * {
 }
 
 .about {
-  position: relative;
   display: grid;
   gap: 0.5rem;
 }
@@ -136,7 +135,7 @@ body > * {
   color: white;
 }
 
-.contact > * {
+.contact * {
   color: inherit;
 }
 
@@ -168,4 +167,68 @@ body > * {
   display: block;
   width: calc(100% + 2rem);
   margin: 4rem -1rem -1rem -1rem;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .about {
+    display: block;
+  }
+
+  .img__wrapper {
+    position: static;
+  }
+
+  .about__img {
+    float: left;
+    max-width: 50%;
+    margin-right: 1rem;
+  }
+
+  .img__txt {
+    top: 1rem;
+    left: calc(50% - 2rem);
+    width: fit-content;
+    height: fit-content;
+    color: lime;
+  }
+
+  .about__txt {
+    margin: 4rem 2rem 0 2rem;
+    padding: 1rem;
+    box-shadow: 4px 4px 8px 4px #eee;
+  }
+
+  .img__txt,
+  .about .h {
+    font-size: min(max(1.5rem, 8vw), 2.5rem);
+  }
+
+  .about__ico {
+    display: none;
+  }
+
+  .main .h,
+  .contact .h {
+    text-align: start;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+
+  .contact {
+    display: flex;
+  }
+
+  .contact__wrapper {
+    padding: 1rem;
+  }
+
+  .contact__ico {
+    justify-content: start;
+  }
+
+  .contact__img {
+    margin: 0;
+  }
 }
