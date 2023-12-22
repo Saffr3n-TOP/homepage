@@ -202,7 +202,38 @@ body > * {
   .about .h {
     font-size: min(max(1.5rem, 8vw), 2.5rem);
   }
+}
 
+@media (min-width: 769px) {
+  .about {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .img__wrapper {
+    width: auto;
+    min-width: 12rem;
+    margin: 0;
+  }
+
+  .about__img {
+    max-width: 100%;
+  }
+
+  .about__txt {
+    max-width: 66%;
+    padding: 1rem;
+    padding-top: 0;
+    box-shadow: 4px 4px 8px 4px #eee;
+  }
+
+  .about .h {
+    text-align: start;
+  }
+}
+
+@media (min-width: 481px) {
   .about__ico {
     display: none;
   }
@@ -218,6 +249,9 @@ body > * {
 
   .contact {
     display: flex;
+    align-items: center;
+    padding-right: 0;
+    overflow: hidden;
   }
 
   .contact__wrapper {
