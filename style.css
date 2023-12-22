@@ -23,6 +23,23 @@ body > * {
   padding: 1rem;
 }
 
+.bg {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  z-index: -1;
+}
+
+.bg__square {
+  height: 20vh;
+  background-color: #0d7fbd;
+}
+
+.bg__triangle {
+  height: 20vh;
+  background: linear-gradient(to bottom right, #0d7fbd, #0d7fbd 50%, white 50%);
+}
+
 .h {
   color: black;
   font-family: var(--serif);
@@ -67,6 +84,7 @@ body > * {
 }
 
 .about__txt {
+  background-color: white;
   color: var(--dark-gray);
 }
 
@@ -189,13 +207,12 @@ body > * {
     left: calc(50% - 2rem);
     width: fit-content;
     height: fit-content;
-    color: lime;
   }
 
   .about__txt {
     margin: 4rem 2rem 0 2rem;
     padding: 1rem;
-    box-shadow: 4px 4px 8px 4px #eee;
+    box-shadow: 4px 4px 16px 0 #555;
   }
 
   .img__txt,
@@ -225,7 +242,7 @@ body > * {
     max-width: 66%;
     padding: 1rem;
     padding-top: 0;
-    box-shadow: 4px 4px 8px 4px #eee;
+    box-shadow: 4px 4px 16px 0 #555;
   }
 
   .about .h {
